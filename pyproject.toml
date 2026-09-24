@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flask-forge"
+version = "0.1.0"
+description = "A higher-level Flask development toolkit by Barsa"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  { name = "Barsa" }
+]
+dependencies = [
+  "Flask>=3.0",
+  "Flask-WTF>=1.2",
+  "Flask-SQLAlchemy>=3.1",
+  "SQLAlchemy>=2.0",
+  "Alembic>=1.13",
+  "requests>=2.31"
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Framework :: Flask",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+[project.optional-dependencies]
+mysql = ["mysql-connector-python>=8.0"]
+test = ["pytest>=8.0"]
+
+[project.urls]
+Homepage = "https://github.com/MohammadHoseinQoddussi/Flask-Forge"
+Repository = "https://github.com/MohammadHoseinQoddussi/Flask-Forge"
+Issues = "https://github.com/MohammadHoseinQoddussi/Flask-Forge/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
