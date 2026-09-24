@@ -1,0 +1,35 @@
+import json
+
+import requests
+
+from .exceptions import MissingDataError, RequestDataError, RunBarsaFlaskKitError
+
+
+def request_data(method: str = None, url: str = None, **setting_request: dict):
+    if not method or not url:
+        raise MissingDataError('the method or url is not defined')
+
+    try:
+        match method:
+            case 'GET':
+                return requests.get(url=url, **setting_request).text
+            case 'POST':
+                return requests.post(url=url, **setting_request).text
+            case 'PUT':
+                return requests.put(url=url, **setting_request).text
+            case 'DELETE':
+                return requests.delete(url=url, **setting_request).text
+            case _:
+                raise RunBarsaFlaskKitError('the method is not defined')
+    except Exception as error:
+        if isinstance(error, RunBarsaFlaskKitError):
+            raise
+        raise RequestDataError(str(error)) from error
+
+
+def to_json(data: str) -> dict:
+    return json.loads(data)
+
+
+def to_text(data: dict) -> str:
+    return json.dumps(data)
