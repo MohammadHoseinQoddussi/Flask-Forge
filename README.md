@@ -250,3 +250,23 @@ The first packaged release is planned as `0.1.0`. Flask-Forge follows semantic-s
 ## License
 
 No open-source license has been selected yet. A license should be chosen before the first public PyPI release if redistribution and reuse terms are intended to be granted.
+
+---
+
+<!-- BARSA-CONTRIBUTORS:START -->
+## Contributors
+
+<table>
+  <tr>
+    <td align="center" valign="top" width="180">
+      <a href="https://github.com/matin-ghadiriyan">
+        <img src="https://avatars.githubusercontent.com/u/330373849?v=4" width="96" height="96" alt="محمدمتین غدیریان" style="border-radius:50%;" />
+        <br />
+        <strong>محمدمتین غدیریان</strong>
+      </a>
+      <br />
+      <sub><a href="https://github.com/matin-ghadiriyan">@matin-ghadiriyan</a></sub>
+    </td>
+  </tr>
+</table>
+<!-- BARSA-CONTRIBUTORS:END -->
